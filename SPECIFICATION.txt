@@ -1,11 +1,11 @@
 This document describes the reasoner specification (primarily input and
-output formats) for the ORE 2014 Competition (see
-<http://vsl2014.at/pages/ORE-index.html>).
+output formats) for the ORE 2015 Competition (see
+<https://www.w3.org/community/owled/ore-2015-workshop/>).
 
 Reasoning Tasks
 ===============
 
-For ORE 2014, the following reasoning tasks are evaluated:
+For ORE 2015, the following reasoning tasks are evaluated:
 
 -   Classification: arranging all classes of an ontology in a class
     hierarchy according to their subsumption relations.
@@ -17,7 +17,7 @@ For ORE 2014, the following reasoning tasks are evaluated:
 
 The reasoning task are evaluated for those OWL 2 Profiles for which
 enough ontologies can be gathered and enough profile-specific reasoners
-participate in the ORE 2014 Competition.
+participate in the ORE 2015 Competition.
 
 Execution Environment
 =====================
@@ -37,7 +37,7 @@ specifications:
 Input Format
 ============
 
-The input format for the ORE 2014 Competition is specified as follows:
+The input format for the ORE 2015 Competition is specified as follows:
 
 -   The encoding format for ontologies and command line arguments is .
 
@@ -53,22 +53,27 @@ The input format for the ORE 2014 Competition is specified as follows:
 
 -   The wrapper script is executed with the following arguments:
 
-    1.  The name of the reasoning task (\<Operation\>), i.e., either
+    1.  Timeout value (in seconds).
+
+    2.  Memory limit for the reasoner process (if it runs in a JVM, 
+	this value would be added to -Xmx). 
+
+    3.  The name of the reasoning task (\<Operation\>), i.e., either
         ’classification’, ’consistency’, or ’realisation’.
 
-    2.  Input file path of the ontology (\<OntologyFile\>).
+    4.  Input file path of the ontology (\<OntologyFile\>).
 
-    3.  Output file path for the result (\<Output\>).
+    5.  Output file path for the result (\<Output\>).
 
     For example, a wrapper script ’execReasoner.sh’ is started with the
     command line:\
-    ./execReasoner.sh classification /ore/ont/pizza.owl
+    ./execReasoner.sh 120 10737418240 classification /ore/ont/pizza.owl
     /ore/out/result.dat
 
 Output Format
 =============
 
-The output format for the ORE 2014 Competition is specified as follows:
+The output format for the ORE 2015 Competition is specified as follows:
 
 -   The results must be encoded with .
 
