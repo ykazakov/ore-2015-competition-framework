@@ -53,7 +53,8 @@ The input format for the ORE 2015 Competition is specified as follows:
 
 -   The wrapper script is executed with the following arguments:
 
-    1.  Timeout value (in seconds).
+    1.  Timeout value (in seconds). This enforces the total processing time
+    that the reasoner is allowed (including input/output) on the operation.
 
     2.  Memory limit for the reasoner process (if it runs in a JVM, 
 	this value would be added to -Xmx). 
