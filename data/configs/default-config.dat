@@ -59,6 +59,6 @@ org.semanticweb.ore.competition.continueexecutorloss	TRUE
 
 # Specifies whether the ontologies are converted to the serialisation format that is specified by the reasoners.
 # Can be set to 'FALSE' if all reasoners accept the format in which all ontologies are serialised.
-org.semanticweb.ore.execution.ontologyconversion	FALSE
+org.semanticweb.ore.execution.ontologyconversion	TRUE
 
 
