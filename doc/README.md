@@ -5,8 +5,8 @@ OWL is a logic-based ontology language standard designed to promote
 interoperability, particularly in the context of the (Semantic) Web. The
 standard has encouraged the development of numerous OWL reasoning
 systems, and such systems are already key components of many
-applications. The 2nd OWL Reasoner Evaluation Competition (ORE 2014) has
-compared and evaluated 11 OWL reasoning systems on a data set containing
+applications. The 3rd OWL Reasoner Evaluation Competition (ORE 2015) 
+evaluates 14 OWL reasoning systems on a data set containing
 a wide range of ontologies from the web, obtained through a standard web
 crawl and the Google Custom Search API, and a snapshot from the well
 known BioPortal repository. Some user submitted ontologies spiced up the
@@ -18,23 +18,40 @@ cover the important tasks of ontology classification, consistency
 checking, and ontology realisation (i.e., the computation of entailed
 types of individuals).
 
-This read-me briefly describes the ORE 2014 Competition Framework, i.e.,
-the framework that has been used to execute the ORE 2014 Live
+This read-me briefly describes the ORE 2014/15 Competition Framework, i.e.,
+the framework that is used to execute the ORE 2014/15 Live
 Competition, and explains how the evaluation can be reproduced.
 
 Any kind of feedback (e.g., suggestions for improvements, bugs, …) can
-be send to the ORE 2014 competition organisers (e.g.,
-[ore2014@easychair.org](ore2014@easychair.org)).
+be send to the ORE competition organisers (e.g.,
+[ore2015@easychair.org](ore2015@easychair.org)).
+
+Quick Start
+======
+
+In order to build the competition framework, Apache Ant must be installed in 
+your system. The command to build the framework is:
+
+`ant -buildfile build-evaluator.xml`
+
+Building the framework will result in the appearance of a JAR file named
+ReasonerQueryEvaluator.jar. Once this file is produced, the framework
+can be executed using the scripts in `/scripts/`, for example: 
+
+`sh ./scripts/test-classification.sh hermit-linux` 
+
+This command will test the classification of ontologies in `/data/ontologies/` 
+on the reasoner in `/data/reasoners/hermit-linux/`.
 
 License
 =======
 
-The ORE 2014 Competition Framework is released as free software: you can
+The ORE 2014/15 Competition Framework is released as free software: you can
 redistribute it and/or modify it under the terms of the GNU Lesser
 General Public License as published by the Free Software Foundation,
 either version 3 of the License, or (at your option) any later version.
 
-The ORE 2014 Competition Framework is distributed in the hope that it
+The ORE 2014/15 Competition Framework is distributed in the hope that it
 will be useful, but WITHOUT ANY WARRANTY; without even the implied
 warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU Lesser General Public License for more details.
@@ -44,7 +61,7 @@ Public License have been included with this distribution in the file
 ’gpl.txt’ and ’lgpl-3.0.txt’, respectively. An online version is
 available at <http://www.gnu.org/licenses/>.
 
-The ORE 2014 Competition Framework uses the following libraries in
+The ORE 2014/15 Competition Framework uses the following libraries in
 unmodified form:
 
 1.  Simple Logging Facade for Java (SLF4J), <http://www.slf4j.org/>,
@@ -203,7 +220,7 @@ client (e.g., with the script ’scripts/local-client.sh’). The web server
 can be started with the script ’scripts/local-status-web-server.sh’ and
 can be accessed at <http://localhost:8008/>.
 
-ORE 2014 Live Competition
+ORE Live Competition
 =========================
 
 The ORE 2014 Live Competition consists of the following components and

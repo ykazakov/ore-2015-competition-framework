@@ -26,6 +26,23 @@ Any kind of feedback (e.g., suggestions for improvements, bugs, …) can
 be send to the ORE competition organisers (e.g.,
 [ore2015@easychair.org](ore2015@easychair.org)).
 
+Quick Start
+======
+
+In order to build the competition framework, Apache Ant must be installed in 
+your system. The command to build the framework is:
+
+`ant -buildfile build-evaluator.xml`
+
+Building the framework will result in the appearance of a JAR file named
+ReasonerQueryEvaluator.jar. Once this file is produced, the framework
+can be executed using the scripts in `/scripts/`, for example: 
+
+`sh ./scripts/test-classification.sh hermit-linux` 
+
+This command will test the classification of ontologies in `/data/ontologies/` 
+on the reasoner in `/data/reasoners/hermit-linux/`.
+
 License
 =======
 
